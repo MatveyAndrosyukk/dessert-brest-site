@@ -56,26 +56,47 @@
   }), { rootMargin: '-45% 0px -50% 0px' });
   secs.forEach(s => navIO.observe(s));
 
-  /* ---------- hero slider ---------- */
-  const texts = $$('.hero-text'), imgs = $$('.hero-img'), num = $('#heroNum'), hero = $('.hero');
-  let hi = 0, htimer;
-  const go = n => {
-    hi = (n + texts.length) % texts.length;
-    texts.forEach((t, i) => t.classList.toggle('is-active', i === hi));
-    imgs.forEach((t, i) => { t.classList.toggle('was', t.classList.contains('is-active') && i !== hi); if (i !== hi && !t.classList.contains('was')) t.classList.remove('was'); t.classList.toggle('is-active', i === hi); });
-    setTimeout(() => imgs.forEach((t, i) => i !== hi && t.classList.remove('was')), 1500);
-    num.textContent = String(hi + 1).padStart(2, '0');
-    const bar = $('.hero-count span');
-    bar.style.animation = 'none'; bar.offsetWidth; bar.style.animation = '';
-    restart();
+  /* ---------- hero: desserts assemble on load, scatter on scroll ---------- */
+  const hero = $('.hero');
+  const title = $('.hero-title span');
+  title.innerHTML = [...title.textContent].map((c, i) => `<span class="ch" style="transition-delay:${0.15 + i * 0.06}s">${c}</span>`).join('');
+  const parts = $$('.hp').map((el, i) => {
+    const cx = +el.dataset.cx, cy = +el.dataset.cy, kind = el.classList.contains('hp-mac') ? 'mac' : 'bit';
+    let dx = cx - 0.76, dy = cy - 0.5; const len = Math.hypot(dx, dy) || 1; dx /= len; dy /= len;
+    const rnd = (n => { const x = Math.sin(n * 91.7) * 1e4; return x - Math.floor(x); })(i + 3);
+    let o;
+    if (kind === 'mac') {
+      const k = i; // 0..3 top->bottom
+      o = { tx: [-0.10, 0.12, -0.14, 0.09][k], ty: [-0.36, -0.12, 0.10, 0.34][k], rot: [-28, 22, -18, 30][k], sc: 0.08, depth: 14 };
+    } else {
+      o = { tx: dx * (0.35 + rnd * 0.4), ty: dy * (0.35 + rnd * 0.4) - 0.08, rot: (rnd - 0.5) * 540, sc: 0.25 + rnd * 0.5, depth: 24 + rnd * 26 };
+    }
+    return { el, ...o, ph: rnd * 6.28, sp: 0.6 + rnd * 0.8 };
+  });
+  const shadow = $('.hero-shadow');
+  let mxh = 0, myh = 0, introStart = 0;
+  const ease = t => 1 - Math.pow(1 - t, 3);
+  const heroLoop = now => {
+    if (!introStart) introStart = now;
+    const intro = reduce ? 0 : 1 - ease(Math.min(1, (now - introStart) / 1600));
+    const r = hero.getBoundingClientRect();
+    if (r.bottom > -50) {
+      const sp = Math.min(1, Math.max(0, -r.top / (r.height * 0.85)));
+      const p = Math.max(intro, sp);
+      const W = r.width, H = r.height;
+      const t = now / 1000;
+      parts.forEach(q => {
+        const fy = reduce ? 0 : Math.sin(t * q.sp + q.ph) * 6, fr = reduce ? 0 : Math.sin(t * q.sp * .8 + q.ph) * 2;
+        const x = q.tx * W * p + mxh * q.depth, y = q.ty * H * p + myh * q.depth + fy;
+        q.el.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0) rotate(${(q.rot * p + fr).toFixed(1)}deg) scale(${(1 + q.sc * p).toFixed(3)})`;
+      });
+      shadow.style.opacity = 1 - p; shadow.style.transform = `scaleX(${1 + p})`;
+    }
+    requestAnimationFrame(heroLoop);
   };
-  const restart = () => { clearInterval(htimer); if (!reduce) htimer = setInterval(() => go(hi + 1), 6000); };
-  $('#heroNext').addEventListener('click', () => go(hi + 1));
-  $('#heroPrev').addEventListener('click', () => go(hi - 1));
-  let tx = null;
-  hero.addEventListener('touchstart', e => tx = e.touches[0].clientX, { passive: true });
-  hero.addEventListener('touchend', e => { if (tx == null) return; const d = e.changedTouches[0].clientX - tx; if (Math.abs(d) > 50) go(hi + (d < 0 ? 1 : -1)); tx = null; });
-  restart();
+  requestAnimationFrame(heroLoop);
+  hero.addEventListener('mousemove', e => { mxh = e.clientX / innerWidth - .5; myh = e.clientY / innerHeight - .5; }, { passive: true });
+  requestAnimationFrame(() => setTimeout(() => hero.classList.add('ready'), 60));
 
   /* ---------- menu carousel ---------- */
   const car = $('#menuCarousel');

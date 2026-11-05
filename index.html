@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Кофейня-кондитерская «Десерт» — торты на заказ и десерты в Бресте</title>
 <meta name="description" content="Кофейня-кондитерская «Десерт» в Бресте: самый большой выбор тортов, торты на заказ от 60 руб за 1 кг, пирожные, ПП-десерты и вкусный кофе. Советская 130 и Пушкинская 43.">
-<meta name="theme-color" content="#f6f1e7">
+<meta name="theme-color" content="#e3e4c9">
 <link rel="icon" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta property="og:title" content="Кофейня-кондитерская «Десерт», Брест">
 <meta property="og:description" content="Торты на заказ, десерты как искусство и вкусный кофе.">
 <meta property="og:image" content="img/cake_bows.webp">
 <link rel="preload" href="fonts/great-vibes-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/source-serif-4-cyrillic-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/hero/mac2.webp" as="image">
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -34,7 +36,7 @@
 <header class="site-header" id="top">
   <div class="header-inner">
     <a href="#top" class="brand" aria-label="Кофейня «Десерт» — на главную">
-      <img src="img/logo-white.png" alt="Логотип кофейни «Десерт»" class="brand-logo" width="626" height="631">
+      <img src="img/logo-green.png" alt="Логотип кофейни «Десерт»" class="brand-logo brand-green"><img src="img/logo-white.png" alt="" aria-hidden="true" class="brand-logo brand-white" width="626" height="631">
     </a>
     <nav class="nav" id="nav" aria-label="Главное меню">
       <a href="#top" class="active">Главная</a>
@@ -46,7 +48,7 @@
     </nav>
     <div class="header-actions">
       <a class="icon-btn" href="https://www.instagram.com/dessert_brest/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#ig"/></svg></a>
-      <a class="btn btn-gold btn-sm header-cta" href="#order" data-open-order>Заказать</a>
+      <a class="btn btn-sm header-cta" href="#order" data-open-order>Заказать</a>
       <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -55,43 +57,17 @@
 <main>
 <!-- HERO -->
 <section class="hero" aria-label="Главный экран">
-  <div class="hero-green">
-    <div class="hero-texture" aria-hidden="true"></div>
-    <div class="hero-copy">
-      <svg class="sprig gold" aria-hidden="true"><use href="#sprig"/></svg>
-      <div class="hero-slides">
-        <div class="hero-text is-active">
-          <p class="script-sm">Кофейня-кондитерская</p>
-          <h1 class="script-xl"><span>Десерты</span><span>как искусство</span></h1>
-          <p class="hero-sub">Самый большой выбор тортов <i>•</i> Брест</p>
-          <a href="#vitrina" class="btn btn-gold">Смотреть витрину</a>
-        </div>
-        <div class="hero-text">
-          <p class="script-sm">Любой дизайн</p>
-          <h2 class="script-xl"><span>Торты</span><span>на заказ</span></h2>
-          <p class="hero-sub">25 начинок <i>•</i> 60 руб за 1 кг</p>
-          <a href="#order" class="btn btn-gold" data-open-order>Заказать торт</a>
-        </div>
-        <div class="hero-text">
-          <p class="script-sm">Каждый день с 8:30</p>
-          <h2 class="script-xl"><span>Кофе</span><span>и пирожные</span></h2>
-          <p class="hero-sub">Советская 130 <i>•</i> Пушкинская 43</p>
-          <a href="#contacts" class="btn btn-gold">Где нас найти</a>
-        </div>
-      </div>
-      <div class="hero-count" aria-hidden="true"><b id="heroNum">01</b><span></span><em>03</em></div>
+  <div class="hero-art" id="heroArt" aria-hidden="true"><div class="hero-art-in"><img class="hp hp-mac" src="img/hero/mac1.webp" alt="" style="left:68.994%;top:8.479%;width:15.82%" data-cx="0.769" data-cy="0.1936"><img class="hp hp-mac" src="img/hero/mac2.webp" alt="" style="left:68.408%;top:29.545%;width:15.186%" data-cx="0.76" data-cy="0.3938"><img class="hp hp-mac" src="img/hero/mac3.webp" alt="" style="left:68.555%;top:48.514%;width:15.625%" data-cx="0.7637" data-cy="0.587"><img class="hp hp-mac" src="img/hero/mac4.webp" alt="" style="left:67.48%;top:68.182%;width:15.576%" data-cx="0.7527" data-cy="0.785"><img class="hp hp-pis" src="img/hero/pis1.webp" alt="" style="left:78.027%;top:0.0%;width:4.59%" data-cx="0.8032" data-cy="0.0367"><img class="hp hp-rasp" src="img/hero/rasp2.webp" alt="" style="left:83.008%;top:4.108%;width:5.811%" data-cx="0.8591" data-cy="0.0935"><img class="hp hp-pis" src="img/hero/pis3.webp" alt="" style="left:85.254%;top:14.948%;width:2.734%" data-cx="0.8662" data-cy="0.174"><img class="hp hp-pis" src="img/hero/pis4.webp" alt="" style="left:62.549%;top:16.783%;width:1.562%" data-cx="0.6333" data-cy="0.1796"><img class="hp hp-pis" src="img/hero/pis5.webp" alt="" style="left:66.406%;top:16.783%;width:1.465%" data-cx="0.6714" data-cy="0.1849"><img class="hp hp-pis" src="img/hero/pis6.webp" alt="" style="left:64.453%;top:20.629%;width:2.93%" data-cx="0.6592" data-cy="0.2281"><img class="hp hp-pis" src="img/hero/pis7.webp" alt="" style="left:64.502%;top:24.213%;width:5.371%" data-cx="0.6719" data-cy="0.295"><img class="hp hp-pis" src="img/hero/pis8.webp" alt="" style="left:83.545%;top:25.175%;width:8.057%" data-cx="0.8757" data-cy="0.3212"><img class="hp hp-pis" src="img/hero/pis9.webp" alt="" style="left:83.545%;top:25.699%;width:1.416%" data-cx="0.8425" data-cy="0.2705"><img class="hp hp-pis" src="img/hero/pis10.webp" alt="" style="left:60.498%;top:33.654%;width:4.883%" data-cx="0.6294" data-cy="0.3872"><img class="hp hp-pis" src="img/hero/pis11.webp" alt="" style="left:88.672%;top:37.85%;width:1.66%" data-cx="0.895" data-cy="0.3942"><img class="hp hp-pis" src="img/hero/pis12.webp" alt="" style="left:65.527%;top:40.559%;width:1.709%" data-cx="0.6638" data-cy="0.4261"><img class="hp hp-pis" src="img/hero/pis13.webp" alt="" style="left:89.697%;top:41.608%;width:2.295%" data-cx="0.9084" data-cy="0.4314"><img class="hp hp-rasp" src="img/hero/rasp14.webp" alt="" style="left:83.691%;top:43.094%;width:5.664%" data-cx="0.8652" data-cy="0.4847"><img class="hp hp-pis" src="img/hero/pis15.webp" alt="" style="left:59.619%;top:43.269%;width:2.246%" data-cx="0.6074" data-cy="0.4528"><img class="hp hp-pis" src="img/hero/pis16.webp" alt="" style="left:64.209%;top:44.58%;width:4.688%" data-cx="0.6655" data-cy="0.483"><img class="hp hp-pis" src="img/hero/pis17.webp" alt="" style="left:62.305%;top:47.028%;width:1.025%" data-cx="0.6282" data-cy="0.4808"><img class="hp hp-pis" src="img/hero/pis18.webp" alt="" style="left:69.727%;top:48.077%;width:1.904%" data-cx="0.7068" data-cy="0.4983"><img class="hp hp-pis" src="img/hero/pis19.webp" alt="" style="left:57.52%;top:51.136%;width:1.904%" data-cx="0.5847" data-cy="0.5262"><img class="hp hp-rasp" src="img/hero/rasp20.webp" alt="" style="left:60.84%;top:53.059%;width:5.859%" data-cx="0.6377" data-cy="0.5874"><img class="hp hp-pis" src="img/hero/pis21.webp" alt="" style="left:83.691%;top:53.059%;width:2.295%" data-cx="0.8484" data-cy="0.5564"><img class="hp hp-pis" src="img/hero/pis22.webp" alt="" style="left:86.963%;top:55.682%;width:1.855%" data-cx="0.8789" data-cy="0.5677"><img class="hp hp-pis" src="img/hero/pis23.webp" alt="" style="left:86.963%;top:60.052%;width:4.932%" data-cx="0.8943" data-cy="0.6442"><img class="hp hp-pis" src="img/hero/pis24.webp" alt="" style="left:64.551%;top:60.927%;width:4.541%" data-cx="0.6682" data-cy="0.6626"><img class="hp hp-rasp" src="img/hero/rasp25.webp" alt="" style="left:81.494%;top:63.549%;width:6.152%" data-cx="0.8457" data-cy="0.6888"><img class="hp hp-pis" src="img/hero/pis26.webp" alt="" style="left:58.203%;top:64.336%;width:4.102%" data-cx="0.6025" data-cy="0.6753"><img class="hp hp-pis" src="img/hero/pis27.webp" alt="" style="left:80.615%;top:66.696%;width:1.27%" data-cx="0.8125" data-cy="0.6766"><img class="hp hp-pis" src="img/hero/pis28.webp" alt="" style="left:79.297%;top:67.308%;width:1.514%" data-cx="0.8005" data-cy="0.6914"><img class="hp hp-pis" src="img/hero/pis29.webp" alt="" style="left:60.4%;top:71.678%;width:5.762%" data-cx="0.6328" data-cy="0.7627"><img class="hp hp-pis" src="img/hero/pis30.webp" alt="" style="left:86.084%;top:74.388%;width:5.762%" data-cx="0.8896" data-cy="0.7889"><img class="hp hp-pis" src="img/hero/pis31.webp" alt="" style="left:57.275%;top:75.524%;width:3.32%" data-cx="0.5894" data-cy="0.7819"><img class="hp hp-pis" src="img/hero/pis32.webp" alt="" style="left:81.836%;top:79.458%;width:4.932%" data-cx="0.843" data-cy="0.8462"><img class="hp hp-rasp" src="img/hero/rasp33.webp" alt="" style="left:63.281%;top:81.031%;width:6.104%" data-cx="0.6633" data-cy="0.8628"><span class="hero-shadow"></span></div></div>
+  <div class="hero-copy">
+    <p class="hero-kicker">Кофейня-кондитерская в Бресте</p>
+    <h1 class="hero-title" aria-label="Десерты"><span aria-hidden="true">Десерты</span></h1>
+    <p class="hero-lead">Самый большой выбор тортов в Бресте, пирожные, макаронс и ПП-десерты. Торты на заказ с любым дизайном — 60 руб за 1 кг.</p>
+    <div class="hero-btns">
+      <a href="#order" class="btn btn-cream">Заказать торт</a>
+      <a href="#menu" class="hero-link">Смотреть начинки</a>
     </div>
-    <button class="slide-arrow prev" id="heroPrev" aria-label="Предыдущий слайд"><svg><use href="#arrow"/></svg></button>
-    <div class="hero-bowl" data-depth="18"><img src="img/d-raspberries.webp" alt="" width="217" height="215"></div>
   </div>
-  <div class="hero-photo">
-    <div class="hero-img is-active"><img src="img/vitrine.webp" alt="Витрина с тортами и пирожными в кофейне «Десерт»"></div>
-    <div class="hero-img"><img src="img/cake_bows.webp" alt="Торт на заказ с бантами"></div>
-    <div class="hero-img"><img src="img/dess_tartlets.webp" alt="Пирожные-тарталетки кофейни «Десерт»"></div>
-    <div class="hero-shade" aria-hidden="true"></div>
-    <button class="slide-arrow next" id="heroNext" aria-label="Следующий слайд"><svg><use href="#arrow"/></svg></button>
-  </div>
-  <img class="deco hero-mint" src="img/d-mint.webp" alt="" data-depth="-14" aria-hidden="true">
+  <a href="#about" class="hero-scroll" aria-label="Листать вниз"><span></span></a>
 </section>
 
 <!-- MARQUEE -->
@@ -226,14 +202,14 @@
 <!-- GALLERY STRIP -->
 <section class="gallery" aria-label="Наши работы">
   <div class="gallery-track" id="gallery">
-    <figure><img src="img/cake_bows.webp" alt="Торт с розовыми бантами" loading="lazy"><button class="btn btn-gold btn-sm" data-open-order data-type="cake">Хочу так же</button></figure>
-    <figure><img src="img/cake_birthday_berries.webp" alt="Торт с ягодами на день рождения" loading="lazy"><button class="btn btn-gold btn-sm" data-open-order data-type="cake">Хочу так же</button></figure>
-    <figure><img src="img/cake_meringue_lemon.webp" alt="Торт с меренгой" loading="lazy"><button class="btn btn-gold btn-sm" data-open-order data-type="cake">Хочу так же</button></figure>
-    <figure><img src="img/cake_raspberry_fig.webp" alt="Торт с малиной" loading="lazy"><button class="btn btn-gold btn-sm" data-open-order data-type="cake">Хочу так же</button></figure>
-    <figure><img src="img/dess_macarons.webp" alt="Макаронс" loading="lazy"><button class="btn btn-gold btn-sm" data-open-order data-type="candy">В кенди-бар</button></figure>
-    <figure><img src="img/dess_mousse_puppy.webp" alt="Муссовое пирожное-пудель" loading="lazy"><button class="btn btn-gold btn-sm" data-open-order data-type="candy">В кенди-бар</button></figure>
-    <figure><img src="img/dess_napoleon_slices.webp" alt="Наполеон и фисташковый наполеон" loading="lazy"><button class="btn btn-gold btn-sm" data-open-order data-type="cake">Хочу так же</button></figure>
-    <figure><img src="img/dess_blueberry_tart.webp" alt="Тарталетка с черникой" loading="lazy"><button class="btn btn-gold btn-sm" data-open-order data-type="candy">В кенди-бар</button></figure>
+    <figure><img src="img/cake_bows.webp" alt="Торт с розовыми бантами" loading="lazy"><button class="btn btn-cream btn-sm" data-open-order data-type="cake">Хочу так же</button></figure>
+    <figure><img src="img/cake_birthday_berries.webp" alt="Торт с ягодами на день рождения" loading="lazy"><button class="btn btn-cream btn-sm" data-open-order data-type="cake">Хочу так же</button></figure>
+    <figure><img src="img/cake_meringue_lemon.webp" alt="Торт с меренгой" loading="lazy"><button class="btn btn-cream btn-sm" data-open-order data-type="cake">Хочу так же</button></figure>
+    <figure><img src="img/cake_raspberry_fig.webp" alt="Торт с малиной" loading="lazy"><button class="btn btn-cream btn-sm" data-open-order data-type="cake">Хочу так же</button></figure>
+    <figure><img src="img/dess_macarons.webp" alt="Макаронс" loading="lazy"><button class="btn btn-cream btn-sm" data-open-order data-type="candy">В кенди-бар</button></figure>
+    <figure><img src="img/dess_mousse_puppy.webp" alt="Муссовое пирожное-пудель" loading="lazy"><button class="btn btn-cream btn-sm" data-open-order data-type="candy">В кенди-бар</button></figure>
+    <figure><img src="img/dess_napoleon_slices.webp" alt="Наполеон и фисташковый наполеон" loading="lazy"><button class="btn btn-cream btn-sm" data-open-order data-type="cake">Хочу так же</button></figure>
+    <figure><img src="img/dess_blueberry_tart.webp" alt="Тарталетка с черникой" loading="lazy"><button class="btn btn-cream btn-sm" data-open-order data-type="candy">В кенди-бар</button></figure>
   </div>
 </section>
 
@@ -315,15 +291,15 @@
         <div class="quiz-nav">
           <button type="button" class="btn btn-ghost" id="qBack">Назад</button>
           <p class="quiz-err" id="qErr" role="alert"></p>
-          <button type="button" class="btn btn-gold" id="qNext">Далее</button>
-          <button type="submit" class="btn btn-gold" id="qSend" hidden>Отправить в Директ</button>
+          <button type="button" class="btn btn-cream" id="qNext">Далее</button>
+          <button type="submit" class="btn btn-cream" id="qSend" hidden>Отправить в Директ</button>
         </div>
       </form>
       <div class="sent" id="sent" hidden>
         <svg class="sent-ico"><use href="#check"/></svg>
         <h3>Сообщение скопировано</h3>
         <p>Мы открыли Директ <b>@dessert_brest</b> — просто вставьте текст и отправьте. Если Instagram не открылся, позвоните: <a href="tel:+375292273590">+375 (29) 227-35-90</a>.</p>
-        <div class="sent-actions"><a class="btn btn-gold" href="https://ig.me/m/dessert_brest" target="_blank" rel="noopener">Открыть Директ ещё раз</a><button class="btn btn-ghost" id="copyAgain" type="button">Скопировать снова</button><button class="btn btn-ghost" id="restart" type="button">Новый заказ</button></div>
+        <div class="sent-actions"><a class="btn btn-cream" href="https://ig.me/m/dessert_brest" target="_blank" rel="noopener">Открыть Директ ещё раз</a><button class="btn btn-ghost" id="copyAgain" type="button">Скопировать снова</button><button class="btn btn-ghost" id="restart" type="button">Новый заказ</button></div>
       </div>
     </div>
   </div>
