@@ -415,6 +415,7 @@ input[type=range]{width:100%;accent-color:var(--gold);height:30px}
 @media (max-width:920px){
   .hero{flex-direction:column;align-items:stretch;min-height:0}
   .hero-copy{order:1;padding-bottom:0!important}
+  .hp,.hp-pis,.hp-rasp{filter:none}
   .hero-art{position:relative;order:2;inset:auto;height:min(112vw,480px);margin-top:4px}
   .hero-art-in{right:auto;left:50%;transform:translateX(-76%);bottom:0;height:100%}
   .hero-copy{padding-top:calc(var(--hh) + 26px);width:calc(100% - 40px)}

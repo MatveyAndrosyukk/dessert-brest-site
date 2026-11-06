@@ -81,7 +81,8 @@
     const intro = reduce ? 0 : 1 - ease(Math.min(1, (now - introStart) / 1600));
     const r = hero.getBoundingClientRect();
     if (r.bottom > -50) {
-      const sp = Math.min(1, Math.max(0, -r.top / (r.height * 0.85)));
+      const mob = innerWidth < 920;
+      const sp = Math.min(1, Math.max(0, (mob ? scrollY : -r.top) / (mob ? innerHeight * 0.42 : r.height * 0.85)));
       const p = Math.max(intro, sp);
       const W = r.width, H = r.height;
       const t = now / 1000;
